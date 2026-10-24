@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d2d">
+  <title>Pranjal Plots | Find Your Perfect Plot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Pranjal Plots home">
+      <span class="brand-mark">P</span><span>Pranjal <b>Plots</b></span>
+    </a>
+    <nav id="desktopNav">
+      <a href="#home">Home</a><a href="#plots">Our Plots</a><a href="#developers">Developers</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <button class="btn btn-outline admin-open" type="button">Admin Login</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A BETTER PLACE TO BUILD YOUR FUTURE</p>
+        <h1>Find the right plot.<br><em>Build your future.</em></h1>
+        <p class="hero-sub">Explore available plots, view location details and contact our team directly.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#plots">Explore Plots <span>↗</span></a>
+          <a class="btn btn-glass" href="#contact">Talk to our team</a>
+        </div>
+        <div class="hero-note"><span class="live-dot"></span> Clear details · Direct enquiry · Personal assistance</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top"><span class="mini-mark">P</span><span>PRANJAL PLOTS</span><span class="verified">● Property listings</span></div>
+        <div class="hero-art"><div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="plot-lines"></div><div class="art-label">YOUR NEXT CHAPTER STARTS HERE</div></div>
+        <div class="hero-card-bottom"><div><small>YOUR SPACE</small><strong>Make it yours.</strong></div><span class="arrow-circle">↗</span></div>
+      </div>
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+    </section>
+
+    <section class="section plots-section" id="plots">
+      <div class="section-heading">
+        <div><p class="eyebrow dark-eyebrow">EXPLORE THE POSSIBILITIES</p><h2>Our <em>plots</em></h2><p class="muted">Choose a plot to see its details, photos and location.</p></div>
+        <div class="listing-count"><span id="plotCount">0</span><small>LISTINGS</small></div>
+      </div>
+      <div class="filter-row">
+        <label class="search-box"><span>⌕</span><input id="plotSearch" type="search" placeholder="Search by plot name or location"></label>
+        <select id="statusFilter" aria-label="Filter plots"><option value="all">All available plots</option><option value="featured">Featured plots</option></select>
+      </div>
+      <div class="plot-grid" id="plotGrid"></div>
+      <div class="empty-state" id="emptyState"><div class="empty-icon">⌂</div><h3>Plots will be listed here soon</h3><p>Contact us on WhatsApp to know which plots are available now.</p><a class="btn btn-green" id="emptyWhatsapp" href="#" target="_blank" rel="noopener">Enquire on WhatsApp ↗</a></div>
+    </section>
+
+    <section class="why-section">
+      <div class="why-intro"><p class="eyebrow">WHY PRANJAL PLOTS</p><h2>Make your next move<br><em>with confidence.</em></h2><p>We help you explore plot options and connect with our team for the details that matter.</p></div>
+      <div class="why-list">
+        <div class="why-item"><span>01</span><div><h3>Details that matter</h3><p>Review plot size, price and location information in one place.</p></div><b>↗</b></div>
+        <div class="why-item"><span>02</span><div><h3>Direct communication</h3><p>Ask questions through WhatsApp, phone or email.</p></div><b>↗</b></div>
+        <div class="why-item"><span>03</span><div><h3>Explore at your pace</h3><p>Browse the available listings without creating an account.</p></div><b>↗</b></div>
+      </div>
+    </section>
+
+    <section class="section developers-section" id="developers">
+      <div class="section-heading"><div><p class="eyebrow dark-eyebrow">THE PEOPLE BEHIND THE WEBSITE</p><h2>Meet our <em>developers</em></h2><p class="muted">Have a question about the website? Get in touch with the team.</p></div></div>
+      <div id="developerCards" class="developer-grid"></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">LET'S FIND YOUR PLOT</p><h2>Have a plot<br>in mind?</h2><p>Tell us what you are looking for. Our team will help you with the next steps.</p></div>
+      <form id="enquiryForm" class="contact-form">
+        <label>Your name<input id="customerName" required placeholder="Enter your name"></label>
+        <label>Phone number<input id="customerPhone" inputmode="tel" placeholder="Optional"></label>
+        <label>What are you looking for?<textarea id="customerMessage" rows="3" required placeholder="Tell us your preferred location or plot details"></textarea></label>
+        <button class="btn btn-gold full" type="submit">Continue on WhatsApp <span>↗</span></button>
+        <small>Your message opens in WhatsApp for you to review and send.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">P</span><span>Pranjal <b>Plots</b></span></a>
+    <p>Find your place. Build your future.</p>
+    <div class="footer-links"><a href="#plots">Our Plots</a><a href="#developers">Developers</a><a href="#contact">Contact</a><button class="footer-admin admin-open" type="button">Admin access</button></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Pranjal Plots. All rights reserved.</span><span>Property details should be verified before purchase.</span></div>
+  </footer>
+
+  <a id="whatsappFloat" class="whatsapp-float" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.1 3.2A12.5 12.5 0 0 0 5.3 22.1L3.7 28l6.1-1.6A12.5 12.5 0 1 0 16.1 3.2Zm0 22.5c-2 0-3.9-.5-5.5-1.6l-.4-.2-3.6 1 1-3.5-.3-.4a10 10 0 1 1 8.8 4.7Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a12 12 0 0 0 4.7 4.2c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4s.3-1.3.2-1.4-.2-.2-.5-.4Z"/></svg></a>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true">
+    <section class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal-close" data-close="loginModal" aria-label="Close">×</button>
+      <div class="modal-brand"><span class="brand-mark">P</span></div><p class="eyebrow dark-eyebrow">RESTRICTED ACCESS</p><h2 id="loginTitle">Admin <em>login</em></h2><p class="muted">Sign in to manage plots and website information.</p>
+      <form id="loginForm">
+        <label>Admin ID<input id="adminId" autocomplete="username" required placeholder="Enter admin ID"></label>
+        <label>Password<input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Enter password"></label>
+        <p id="loginError" class="form-error" role="alert"></p>
+        <button class="btn btn-green full" type="submit">Sign in to dashboard ↗</button>
+      </form>
+      <p class="security-note">Demo login only. Do not use these browser-side credentials for a production website.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <section class="modal dashboard-modal" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle">
+      <div class="dashboard-header"><div><p class="eyebrow dark-eyebrow">CONTROL CENTRE</p><h2 id="dashboardTitle">Admin <em>dashboard</em></h2><p class="muted" id="signedInAs"></p></div><button class="modal-close" data-close="dashboardModal" aria-label="Close">×</button></div>
+      <div class="admin-tabs"><button class="tab active" data-tab="plotsTab">Manage plots</button><button class="tab" data-tab="siteTab">Website & developers</button></div>
+      <div id="plotsTab" class="tab-panel">
+        <div class="admin-panel-heading"><div><h3>Plot listings</h3><p>Changes are saved in this browser.</p></div><button id="addPlotBtn" class="btn btn-green">＋ Add plot</button></div>
+        <div id="adminPlotList" class="admin-plot-list"></div>
+        <form id="plotForm" class="editor-form hidden">
+          <div class="editor-title"><h3 id="plotFormTitle">Add a plot</h3><button type="button" class="text-button" id="cancelPlotEdit">Cancel</button></div>
+          <input type="hidden" id="editPlotId">
+          <div class="form-grid">
+            <label>Plot name *<input id="editPlotName" required placeholder="e.g. Green Valley Plot"></label>
+            <label>Plot code<input id="editPlotCode" placeholder="e.g. PP-001"></label>
+            <label>Price / price note<input id="editPlotPrice" placeholder="e.g. ₹12 lakh"></label>
+            <label>Plot size<input id="editPlotSize" placeholder="e.g. 1200 sq ft"></label>
+            <label class="wide">Address / location<input id="editPlotAddress" placeholder="Full address or area"></label>
+            <label class="wide">Google Maps link<input id="editPlotMap" type="url" placeholder="https://maps.google.com/..."></label>
+            <label class="wide">Photo (choose from computer)<input id="editPlotImage" type="file" accept="image/*"></label>
+            <label class="wide">Or photo URL<input id="editPlotImageUrl" type="url" placeholder="https://..."></label>
+            <label class="check-label"><input id="editPlotFeatured" type="checkbox"> Mark as featured</label>
+            <label class="check-label"><input id="editPlotVisible" type="checkbox" checked> Show on public website</label>
+          </div>
+          <div class="form-actions"><button class="btn btn-green" type="submit">Save plot</button><button class="btn btn-outline" type="button" id="cancelPlotEdit2">Cancel</button></div>
+          <p class="small-note">Tip: large photos use browser storage. For a live multi-device website, connect a backend and image storage.</p>
+        </form>
+      </div>
+      <div id="siteTab" class="tab-panel hidden">
+        <form id="siteForm" class="editor-form site-editor">
+          <h3>Website contact details</h3><p class="muted">These details appear on the public website.</p>
+          <div class="form-grid">
+            <label>WhatsApp number (country code, digits only)<input id="siteWhatsapp" placeholder="919XXXXXXXXX" required></label>
+            <label>Public phone number<input id="sitePhone" placeholder="Phone number"></label>
+            <label>Public email<input id="siteEmail" type="email" placeholder="name@example.com"></label>
+            <label>Website name<input id="siteBrand" required></label>
+            <label class="wide">About / short introduction<textarea id="siteAbout" rows="3" placeholder="Add your About section later"></textarea></label>
+          </div>
+          <h3 class="editor-subhead">Developer portfolio</h3>
+          <p class="muted">Upload a profile photo or use an image URL. Leave a field empty if you want to hide it.</p>
+          <div class="form-grid">
+            <label>Developer name<input id="devName"></label>
+            <label>Role / title<input id="devRole" placeholder="Website Developer"></label>
+            <label>Developer phone<input id="devPhone"></label>
+            <label>Developer email<input id="devEmail" type="email"></label>
+            <label class="wide">Profile photo<input id="devPhoto" type="file" accept="image/*"></label>
+            <label class="wide">Or photo URL<input id="devPhotoUrl" type="url" placeholder="https://..."></label>
+          </div>
+          <button class="btn btn-green" type="submit">Save website details</button>
+        </form>
+      </div>
+      <div class="dashboard-footer"><span>Signed in as an administrator</span><button class="btn btn-outline" id="logoutBtn">Log out</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
